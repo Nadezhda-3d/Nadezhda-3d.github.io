@@ -123,7 +123,7 @@ function initCanvasBase(){
 
 function loadTexture() {
 
-    ImageLoader.load('./models/A5/A5_gal.jpg', function (image) {  
+    ImageLoader.load('./models/A5_gal.jpg', function (image) {  
        
         img = image; panel.textureCanvas.drawImage(img, 0,0, 4096, 4096);  
         panel.imagesArray.set(2,
@@ -135,7 +135,7 @@ function loadTexture() {
             });         
     });
 
-    ImageLoader.load('./models/A5/A5_yrd_gal.jpg', image => {
+    ImageLoader.load('./models/A5_yrd_gal.jpg', image => {
        
         img2 = image; panel.textureCanvas.drawImage(img2, 0, 0, 4096, 4096);
         panel.imagesArray.set(1,{
@@ -167,7 +167,7 @@ function loadModel() {
     Material.map = loadTexture();
     Material.needsUpdate = true;
     
-    OBJ_LOADER.load('./models/A5/A5_gal.obj', (object) => {
+    OBJ_LOADER.load('./models/A5_gal.obj', (object) => {
 
         object.traverse( function (node) {
             if(node.type == 'Mesh') {
